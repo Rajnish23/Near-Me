@@ -1,28 +1,27 @@
 package com.search.nearme.ui;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
+import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import com.google.android.flexbox.FlexDirection;
-import com.google.android.flexbox.FlexboxLayoutManager;
-import com.google.android.flexbox.JustifyContent;
+import android.util.Log;
 import com.search.nearme.R;
+import com.search.nearme.adapter.HomeScreenAdapter;
+import com.search.nearme.utils.itemClickListener;
 
-import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements itemClickListener {
+
+    private static final String TAG = "HomeActivity";
 
     private RecyclerView mRecyclerView;
+
+    private String [] nameList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,56 +30,37 @@ public class HomeActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.home_recycler);
 
-        String [] nameList = getResources().getStringArray(R.array.input);
+        nameList = getResources().getStringArray(R.array.input);
 
-        HomeScreenAdapter homeScreenAdapter = new HomeScreenAdapter(this,nameList);
+        final TypedArray imageArray = getResources().obtainTypedArray(R.array.input_icon);
+
+        HomeScreenAdapter homeScreenAdapter = new HomeScreenAdapter(this,nameList,imageArray,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemViewCacheSize(20);
         mRecyclerView.setAdapter(homeScreenAdapter);
 
+        Toolbar toolbar = findViewById(R.id.home_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(getString(R.string.near_me));
 
     }
 
-    private class HomeScreenAdapter extends RecyclerView.Adapter<HomeScreenAdapter.HomseScreenViewHolder>{
+    @Override
+    public void onClickItem(int pos) {
 
-        private LayoutInflater inflater;
+        String type = nameList[pos].toLowerCase();
+        Intent searchIntent = new Intent(HomeActivity.this,SearchResultActivity.class);
+        searchIntent.putExtra("title",nameList[pos]);
+        searchIntent.putExtra("type",type);
+        startActivity(searchIntent);
+    }
 
-        private String[] itemNameList;
+    @Override
+    public void onClickDrivingMode(int pos, String mode) {
 
-        public HomeScreenAdapter(Context context,String[] itemNameList) {
-            inflater = LayoutInflater.from(context);
-            this.itemNameList = itemNameList;
-        }
-
-        @NonNull
-        @Override
-        public HomseScreenViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-            View view = inflater.inflate(R.layout.home_screen_item_layout,parent,false);
-            return new HomseScreenViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull HomseScreenViewHolder holder, int position) {
-            holder.title.setText(itemNameList[position]);
-        }
-
-        @Override
-        public int getItemCount() {
-            return itemNameList.length;
-        }
-
-        public class HomseScreenViewHolder extends RecyclerView.ViewHolder {
-
-            TextView title;
-            public HomseScreenViewHolder(@NonNull View itemView) {
-                super(itemView);
-
-                title = itemView.findViewById(R.id.title);
-            }
-        }
     }
 }

@@ -115,12 +115,12 @@ public class SplashActivity extends AppCompatActivity implements
                         }
                     }
                 });
-        Log.i(TAG, "onConnected: ");
+
     }
 
     @Override
     public void onConnectionSuspended(int i) {
-        Log.i(TAG, "onConnectionSuspended: ");
+
         mGoogleApiClient.reconnect();
     }
 
@@ -134,7 +134,7 @@ public class SplashActivity extends AppCompatActivity implements
             }
         }
         else{
-            Log.i(TAG, "onConnectionFailed: ");
+            Toast.makeText(this,getString(R.string.somthing_went_wrong),Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -151,14 +151,14 @@ public class SplashActivity extends AppCompatActivity implements
             }
             else{
                 finish();
-                Toast.makeText(this,"Location Permission Required",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,getString(R.string.permission_denied),Toast.LENGTH_LONG).show();
             }
         }
     }
 
     private void updateLocation(Location location) {
-        Log.i(TAG, "updateLocation: "+location.toString());
 
+        AppConst.setLocationValue(location.getLatitude()+","+location.getLongitude());
         SharedPreferences.Editor editor = mSharedPref.edit();
         editor.putString(AppConst.LATTITUDE,String.valueOf(location.getLatitude()));
         editor.putString(AppConst.LONGITUDE,String.valueOf(location.getLongitude()));

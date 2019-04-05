@@ -14,59 +14,90 @@
         <item>@string/bowling_alley</item>
         <item>@string/bus_station</item>
         <item>@string/cafe</item>
-        <item>@string/car_dealer</item>
-        <item>@string/car_rental</item>
         <item>@string/car_repair</item>
-        <item>@string/car_wash</item>
         <item>@string/church</item>
-        <item>@string/city_hall</item>
         <item>@string/clothing_store</item>
         <item>@string/dentist</item>
-        <item>@string/department_store</item>
         <item>@string/doctor</item>
         <item>@string/electrician</item>
-        <item>@string/electronics_store</item>
-        <item>@string/embassy</item>
         <item>@string/fire_station</item>
         <item>@string/furniture_store</item>
         <item>@string/gas_station</item>
         <item>@string/gym</item>
-        <item>@string/hair_care</item>
-        <item>@string/hardware_store</item>
         <item>@string/hindu_temple</item>
-        <item>@string/home_goods_store</item>
         <item>@string/hospital</item>
-        <item>@string/insurance_agency</item>
         <item>@string/jewelry_store</item>
         <item>@string/laundry</item>
         <item>@string/lawyer</item>
-        <item>@string/library</item>
         <item>@string/liquor_store</item>
-        <item>@string/local_government_office</item>
         <item>@string/mosque</item>
         <item>@string/movie_theater</item>
         <item>@string/museum</item>
-        <item>@string/night_club</item>
         <item>@string/park</item>
         <item>@string/parking</item>
-        <item>@string/pet_store</item>
         <item>@string/pharmacy</item>
-        <item>@string/physiotherapist</item>
         <item>@string/police</item>
         <item>@string/post_office</item>
-        <item>@string/real_estate_agency</item>
         <item>@string/restaurant</item>
         <item>@string/school</item>
         <item>@string/shopping_mall</item>
         <item>@string/spa</item>
         <item>@string/stadium</item>
-        <item>@string/subway_station</item>
         <item>@string/train_station</item>
-        <item>@string/transit_station</item>
         <item>@string/travel_agency</item>
         <item>@string/university</item>
         <item>@string/zoo</item>
+
     </string-array>
+
+    <integer-array name="input_icon">
+        <item>@drawable/ic_airport</item>
+        <item>@drawable/ic_amusement_park</item>
+        <item>@drawable/ic_atm</item>
+        <item>@drawable/ic_bakery</item>
+        <item>@drawable/ic_bank</item>
+        <item>@drawable/ic_bar</item>
+        <item>@drawable/ic_beauty_saloon</item>
+        <item>@drawable/ic_bicycle_store</item>
+        <item>@drawable/ic_book_store</item>
+        <item>@drawable/ic_bowling_alley</item>
+        <item>@drawable/ic_bus_station</item>
+        <item>@drawable/ic_cafe</item>
+        <item>@drawable/ic_car_repair</item>
+        <item>@drawable/ic_church</item>
+        <item>@drawable/ic_clothes_store</item>
+        <item>@drawable/ic_dentist</item>
+        <item>@drawable/ic_doctor</item>
+        <item>@drawable/ic_electrician</item>
+        <item>@drawable/ic_fire_station</item>
+        <item>@drawable/ic_furniture</item>
+        <item>@drawable/ic_fuel_station</item>
+        <item>@drawable/ic_gym</item>
+        <item>@drawable/ic_temple</item>
+        <item>@drawable/ic_hospital</item>
+        <item>@drawable/ic_jwellery</item>
+        <item>@drawable/ic_laundry</item>
+        <item>@drawable/ic_lawer</item>
+        <item>@drawable/ic_liquor</item>
+        <item>@drawable/ic_mosque</item>
+        <item>@drawable/ic_theater</item>
+        <item>@drawable/ic_museum</item>
+        <item>@drawable/ic_park</item>
+        <item>@drawable/ic_parking</item>
+        <item>@drawable/ic_pharmacy</item>
+        <item>@drawable/ic_police</item>
+        <item>@drawable/ic_post_office</item>
+        <item>@drawable/ic_restaurant</item>
+        <item>@drawable/ic_school</item>
+        <item>@drawable/ic_spa</item>
+        <item>@drawable/ic_stadium</item>
+        <item>@drawable/ic_temple</item>
+        <item>@drawable/ic_train_station</item>
+        <item>@drawable/ic_travel_agency</item>
+        <item>@drawable/ic_university</item>
+        <item>@drawable/ic_zoo</item>
+
+    </integer-array>
 
     <string name="airport">Airport</string>
     <string name="amusement_park">Amusement Park</string>
@@ -80,57 +111,51 @@
     <string name="bowling_alley">Bowling Alley</string>
     <string name="bus_station">Bus Station</string>
     <string name="cafe">Cafe</string>
-    <string name="car_dealer">Car Dealer</string>
-    <string name="car_rental">Car Rental</string>
     <string name="car_repair">Car Repair</string>
-    <string name="car_wash">Car Wash</string>
     <string name="church">Church</string>
-    <string name="city_hall">City Hall</string>
     <string name="clothing_store">Clothing Store</string>
     <string name="dentist">Dentist</string>
-    <string name="department_store">Department Store</string>
     <string name="doctor">Doctor</string>
     <string name="electrician">Electrician</string>
-    <string name="electronics_store">Electronics Store</string>
-    <string name="embassy">Embassy</string>
     <string name="fire_station">Fire Station</string>
     <string name="furniture_store">Furniture Store</string>
     <string name="gas_station">Gas Station</string>
     <string name="gym">Gym</string>
-    <string name="hair_care">Hair Care</string>
-    <string name="hardware_store">Hardware Store</string>
     <string name="hindu_temple">Hindu Temple</string>
-    <string name="home_goods_store">Home Goods Store</string>
     <string name="hospital">Hospital</string>
-    <string name="insurance_agency">Insurance Agency</string>
     <string name="jewelry_store">Jewelry Store</string>
     <string name="laundry">Laundry</string>
     <string name="lawyer">Lawyer</string>
-    <string name="library">Library</string>
     <string name="liquor_store">Liquor Store</string>
-    <string name="local_government_office">Local Government office</string>
     <string name="mosque">Mosque</string>
     <string name="movie_theater">Movie Theater</string>
     <string name="museum">Museum</string>
-    <string name="night_club">Night Club</string>
     <string name="park">Park</string>
     <string name="parking">Parking</string>
-    <string name="pet_store">Pet Store</string>
     <string name="pharmacy">Pharmacy</string>
-    <string name="physiotherapist">Physiotherapist</string>
     <string name="police">Police</string>
     <string name="post_office">Post Office</string>
-    <string name="real_estate_agency">Real Estate Agency</string>
     <string name="restaurant">Restaurant</string>
     <string name="school">School</string>
     <string name="shopping_mall">Shopping Mall</string>
     <string name="spa">SPA</string>
     <string name="stadium">Stadium</string>
-    <string name="subway_station">Subway Station</string>
     <string name="train_station">Train Station</string>
-    <string name="transit_station">Transit Station</string>
     <string name="travel_agency">Travel Agency</string>
     <string name="university">University</string>
     <string name="zoo">Zoo</string>
+    <string name="title_activity_location">Map</string>
+
+    <string name="near_me">Near Me</string>
+    <string name="destination">Destination</string>
+    <string name="current_location">Current Location</string>
+    <string name="please_wait">Please Wait..!</string>
+    <string name="fetch_details">Fetching Details for you</string>
+    <string name="bicycling">bicycling</string>
+    <string name="bicycle_do_not_support">Bicycle Mode does not Support!</string>
+    <string name="permission_denied">Location Permission Required</string>
+    <string name="somthing_went_wrong">Something Went Wrong</string>
+    <string name="open_now">Open Now</string>
+    <string name="closed">Closed</string>
 
 </resources>
