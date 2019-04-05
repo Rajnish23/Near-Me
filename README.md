@@ -27,6 +27,8 @@ For Map - Used Google Map SDK.
       <li>mode=driving</li>
     </ul>  
 </ul>
+
+<h3>ScreenShots</h3>
 <p align="center">
 <img src="https://github.com/Rajnish23/Near-Me/blob/master/screenshots/Screenshot_2019-04-05-13-35-52-934_com.search.nearme.png" width=300/>
 <img src="https://github.com/Rajnish23/Near-Me/blob/master/screenshots/Screenshot_2019-04-05-13-35-59-902_com.search.nearme.png" width=300/>
