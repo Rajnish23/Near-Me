@@ -28,5 +28,5 @@ For Map - Used Google Map SDK.
     </ul>  
 </ul>
 
-
+<img src="https://github.com/Rajnish23/Near-Me/blob/master/screenshots/Screenshot_2019-04-05-13-35-52-934_com.search.nearme.png" width=500 height=500/>
 
